@@ -13,8 +13,6 @@ import PropTypes from 'prop-types';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 
-console.log('Obsequios', Obsequios);
-
 const columnData = [
   { id: 'Funcionario_Apellido_Completo', numeric: false, disablePadding: false, label: 'Apellido' },
   { id: 'Funcionario_Nombre_Completo', numeric: false, disablePadding: false, label: 'Nombre' },
@@ -92,7 +90,7 @@ class App extends Component {
         <AppBar position="static" color="default">
           <Toolbar>
             <Typography type="title" color="inherit">
-              Obsequios a funcionarios públicos
+              Obsequios a funcionarios públicos de Argentina
             </Typography>
           </Toolbar>
         </AppBar>
