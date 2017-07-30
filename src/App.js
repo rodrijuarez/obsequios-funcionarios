@@ -102,24 +102,15 @@ class App extends Component {
             {data.map(obsequio => {
               return (
                 <TableRow key={obsequio.Registro}>
-                  <TableCell>
-                    {obsequio.Funcionario_Apellido_Completo}
-                  </TableCell>
-                  <TableCell>
-                    {obsequio.Funcionario_Nombre_Completo}
-                  </TableCell>
-                  <TableCell>
-                    {obsequio.Funcionario_Funcion}
-                  </TableCell>
-                  <TableCell>
-                    {obsequio.Funcionario_Cuil}
-                  </TableCell>
-                  <TableCell>
-                    {obsequio.Obsequio_Descripcion}
-                  </TableCell>
-                  <TableCell>
-                    {obsequio.Obsequio_Valor_Estimado}
-                  </TableCell>
+                  {columnData.map(column => {
+                    {
+                      return (
+                        <TableCell style={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>
+                          {obsequio[column.id]}
+                        </TableCell>
+                      );
+                    }
+                  })}
                 </TableRow>
               );
             })}
