@@ -6,9 +6,11 @@ import { Button, MuiThemeProvider } from 'material-ui';
 import React, { Component } from 'react';
 import Table, { TableBody, TableCell, TableHead, TableRow, TableSortLabel } from 'material-ui/Table';
 
+import AppBar from 'material-ui/AppBar';
 import { Obsequios } from './obsequios';
 import Paper from 'material-ui/Paper';
 import PropTypes from 'prop-types';
+import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 
 console.log('Obsequios', Obsequios);
@@ -87,6 +89,13 @@ class App extends Component {
 
     return (
       <Paper>
+        <AppBar position="static" color="default">
+          <Toolbar>
+            <Typography type="title" color="inherit">
+              Obsequios a funcionarios públicos
+            </Typography>
+          </Toolbar>
+        </AppBar>
         <Table>
           <EnhancedTableHead order={order} orderBy={orderBy} onRequestSort={this.handleRequestSort} />
           <TableBody>
